@@ -69,8 +69,8 @@ The application follows object-oriented design principles such as encapsulation,
 
 ---
 
-4.1.2 User Scenarios Extended
-US_01: User registration
+## User Stories
+### 01: User registration
 
 User navigates to the registration page.
 
@@ -83,8 +83,8 @@ System validates the entered information.
 System creates a new account.
 
 System confirms successful registration.
-
-US_02: User login
+---
+### 02: User login
 
 User navigates to login page.
 
@@ -95,8 +95,8 @@ System validates credentials.
 System grants access and redirects to dashboard.
 
 If credentials are invalid, system displays error message.
-
-US_03: Create food donation
+---
+### 03: Create food donation
 
 Food provider logs into the system.
 
@@ -111,8 +111,8 @@ System validates the information.
 System creates a new food donation listing.
 
 Listing becomes visible to receivers.
-
-US_04: View available food
+---
+### 04: View available food
 
 Food receiver logs into the system.
 
@@ -123,8 +123,8 @@ System retrieves active food listings.
 System displays available food donations.
 
 Receiver selects a listing to view details.
-
-US_05: Request food donation
+---
+### 05: Request food donation
 
 Food receiver selects a food listing.
 
@@ -135,8 +135,8 @@ Receiver confirms request submission.
 System records the request.
 
 System notifies the food provider.
-
-US_06: Manage food posts
+---
+### 06: Manage food posts
 
 Provider navigates to "My Food Posts".
 
@@ -147,8 +147,8 @@ Provider selects a listing to edit or delete.
 Provider updates details or removes listing.
 
 System updates the database.
-
-US_07: View donation requests
+---
+### 07: View donation requests
 
 Provider logs into the system.
 
@@ -159,8 +159,8 @@ System retrieves requests related to provider's listings.
 System displays request details.
 
 Provider reviews the requests.
-
-US_08: Approve or reject request
+---
+### 08: Approve or reject request
 
 Provider selects a donation request.
 
@@ -171,8 +171,8 @@ Provider chooses approve or reject.
 System updates request status.
 
 System notifies the receiver of the decision.
-
-US_09: Track request status
+---
+### 09: Track request status
 
 Receiver navigates to "My Requests".
 
@@ -181,8 +181,9 @@ System retrieves all submitted requests.
 System displays status (Pending / Approved / Rejected).
 
 Receiver views pickup information if approved.
+---
 
-US_10: Cancel request
+### 10: Cancel request
 
 Receiver selects a submitted request.
 
@@ -191,8 +192,8 @@ Receiver chooses cancel request.
 System confirms cancellation.
 
 System removes the request from active listings.
-
-US_11: Confirm pickup
+---
+### 11: Confirm pickup
 
 Receiver arrives at pickup location.
 
@@ -202,7 +203,7 @@ System updates donation status to "Completed".
 
 System records the completed donation.
 
-US_12: Manage users (Administrator)
+### 12: Manage users (Administrator)
 
 Administrator logs into the system.
 
@@ -213,6 +214,184 @@ System displays list of registered users.
 Admin can deactivate or remove suspicious accounts.
 
 System updates the user database. 
+---
+### 13: Search food donations
+
+ Food receiver navigates to the "Available Food" section.
+ 
+ Receiver enters a keyword in the search field (e.g., bread, vegetables).
+
+ System processes the search request.
+ 
+ System retrieves matching food listings.
+ 
+ System displays the filtered results to the receiver.
+
+---
+
+### 14: Filter food listings
+Food receiver navigates to the food listings page.
+
+ Receiver selects filter options (location, quantity, pickup time).
+ 
+ System applies selected filters.
+ 
+ System retrieves matching listings from the database.
+ 
+ System displays filtered results to the receiver.
+
+---
+
+### 15: View donation details
+
+ Food receiver browses available food listings.
+ 
+ Receiver selects a specific listing.
+ 
+ System retrieves detailed information about the donation.
+ 
+ System displays food description, quantity, provider, pickup location, and pickup time.
+ 
+ Receiver reviews the information.
+
+---
+
+### 16: Notification of new donations
+
+ Food provider creates a new food donation post.
+ 
+ 
+System saves the new listing in the database.
+
+ System identifies receivers subscribed to notifications.
+ 
+ System sends a notification about the new donation.
+ 
+ Receivers receive the notification and may view the listing.
+
+---
+
+### 17: View donation history
+
+ Food provider logs into the system.
+ 
+ Provider navigates to the "Donation History" section.
+ 
+ System retrieves past donation records.
+ 
+ System displays completed donation listings.
+ 
+ Provider reviews their previous donations.
+
+---
+
+### 18: View request history
+
+ Food receiver logs into the system.
+ 
+ Receiver navigates to the "My Requests" section.
+ 
+ System retrieves all previously submitted requests.
+ 
+ System displays request history with status information.
+ 
+ Receiver reviews past requests.
+
+---
+
+### 19: Rate donation experience
+
+ A food donation is marked as completed.
+ 
+ System prompts both provider and receiver to leave feedback.
+ 
+ User selects a rating score.
+ 
+ User optionally enters written feedback.
+ 
+ System stores the rating and feedback.
+
+---
+
+### 20: Report inappropriate listing
+Food receiver views a food listing.
+ 
+ Receiver selects the "Report Listing" option.
+ 
+ Receiver selects a reason for the report.
+ 
+ System records the report.
+ 
+ System notifies the administrator for review.
+
+### 21: Priority distribution for urgent requests
+
+ Food receiver submits a food request.
+ 
+ Receiver marks the request as urgent if the organization has immediate need.
+ 
+ System evaluates the request priority.
+
+System highlights urgent requests to the food provider.
+
+Food provider reviews and may prioritize the urgent request.
+
+---
+
+### 22: Automatic expiration of food listings
+
+ Food provider creates a food donation listing.
+
+ Provider specifies pickup deadline.
+ 
+ System stores the listing and monitors expiration time.
+ 
+ When the pickup time passes, the system automatically marks the listing as expired.
+ 
+ Expired listings are removed from the available food list.
+
+---
+
+### 23: Sustainability impact tracking
+
+ Food donation is successfully completed.
+ 
+ System calculates the amount of food saved from waste.
+ 
+ System updates sustainability statistics.
+ 
+ System records environmental impact data.
+ 
+ Users can view statistics such as total food saved and number of donations.
+
+---
+
+### 24: Pickup reminder notification
+
+ Food request is approved by the provider.
+ 
+ System records the scheduled pickup time.
+ 
+ System sends reminder notifications to the receiver before pickup.
+ 
+ Receiver receives the reminder notification.
+ 
+ Receiver prepares to collect the food.
+
+---
+
+### 25: Generate donation report (Administrator)
+
+ Administrator logs into the system.
+ 
+ Admin navigates to the reporting dashboard.
+ 
+ System retrieves donation activity data.
+ 
+ System generates statistics such as total donations, active users, and completed pickups.
+ 
+ Administrator reviews or exports the report.
+
 
 
 
